@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Facade as LaravelFacade;
 use YL20181120\Easemob\Services\ChatRoom;
 use YL20181120\Easemob\Services\Friend;
 use YL20181120\Easemob\Services\Group;
+use YL20181120\Easemob\Services\Message;
 use YL20181120\Easemob\Services\User;
 use YL20181120\Easemob\Services\Conference;
 
@@ -63,5 +64,14 @@ class Facade extends LaravelFacade
     public static function conference()
     {
         return app('easemob.conference');
+    }
+
+    /**
+     * @return Message
+     * @author Jasmine2
+     */
+    public static function message()
+    {
+        return app('easemob.message');
     }
 }

@@ -7,6 +7,7 @@
 namespace YL20181120\Easemob\Services;
 
 use YL20181120\Easemob\Http\Client as Http;
+use Illuminate\Support\Arr;
 
 class Friend extends BaseService
 {
@@ -51,7 +52,7 @@ class Friend extends BaseService
      */
     public function showFriends($user_name)
     {
-        $url = $this->url . 'users/' . $user_name . '/contacts/users/';
+        $url = $this->url . 'users/' . $user_name . '/contacts/users';
         return Http::auth('GET', $url);
     }
 
@@ -65,7 +66,20 @@ class Friend extends BaseService
      */
     public function showGroups($user_name)
     {
-        $url = $this->url . 'users/' . $user_name . '/joined_chatgroups/';
+        $url = $this->url . 'users/' . $user_name . '/joined_chatgroups';
         return Http::auth('GET', $url);
+    }
+
+    public function blocks($user)
+    {
+        $url = $this->url . "users/{$user}/blocks/users";
+        return Http::auth('get', $url);
+    }
+
+    public function removeBlocks($user, $users)
+    {
+        $users = Arr::wrap($users);
+        $url   = $this->url . "users/{$user}/blocks/users/" . join('/', $users);
+        return Http::auth('delete', $url);
     }
 }

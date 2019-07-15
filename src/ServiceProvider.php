@@ -12,6 +12,7 @@ use YL20181120\Easemob\Services\ChatRoom;
 use YL20181120\Easemob\Services\Conference;
 use YL20181120\Easemob\Services\Friend;
 use YL20181120\Easemob\Services\Group;
+use YL20181120\Easemob\Services\Message;
 use YL20181120\Easemob\Services\User;
 
 class ServiceProvider extends LaravelServiceProvider
@@ -30,7 +31,8 @@ class ServiceProvider extends LaravelServiceProvider
             'friend'     => Friend::class,
             'chat-room'  => ChatRoom::class,
             'group'      => Group::class,
-            'conference' => Conference::class
+            'conference' => Conference::class,
+            'message'    => Message::class
         ];
 
         foreach ($apps as $name => $class) {
