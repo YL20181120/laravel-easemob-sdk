@@ -11,6 +11,7 @@ use YL20181120\Easemob\Services\ChatRoom;
 use YL20181120\Easemob\Services\Friend;
 use YL20181120\Easemob\Services\Group;
 use YL20181120\Easemob\Services\User;
+use YL20181120\Easemob\Services\Conference;
 
 class Facade extends LaravelFacade
 {
@@ -56,7 +57,7 @@ class Facade extends LaravelFacade
     }
 
     /**
-     * @return Friend
+     * @return Conference
      * @author Jasmine2
      */
     public static function conference()
