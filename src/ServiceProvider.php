@@ -45,7 +45,6 @@ class ServiceProvider extends LaravelServiceProvider
             $baseHost = config('easemob.domain_name');
             $client   = new Client([
                 'base_uri' => $baseHost,
-                'debug'    => true,
                 'headers'  => [
                     'accept' => 'application/json'
                 ]
