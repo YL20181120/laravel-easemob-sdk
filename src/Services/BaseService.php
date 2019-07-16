@@ -41,4 +41,11 @@ class BaseService
         $this->url              = sprintf('%s/%s/', $this->org_name, $this->app_name);
         $this->gateway          = $config['domain_name'];
     }
+
+    public static function stringReplace($string)
+    {
+        $string = str_replace('\\', '', $string);
+        $string = str_replace(' ', '+', $string);
+        return $string;
+    }
 }

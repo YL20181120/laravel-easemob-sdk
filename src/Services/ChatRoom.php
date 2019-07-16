@@ -7,6 +7,7 @@
 namespace YL20181120\Easemob\Services;
 
 use YL20181120\Easemob\Http\Client as Http;
+use YL20181120\Easemob\Exceptions\EasemobError;
 
 class ChatRoom extends BaseService
 {
