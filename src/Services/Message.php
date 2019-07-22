@@ -7,6 +7,7 @@
 namespace YL20181120\Easemob\Services;
 
 
+use Illuminate\Support\Arr;
 use YL20181120\Easemob\Exceptions\EasemobError;
 use YL20181120\Easemob\Http\Client as Http;
 
